@@ -9,6 +9,7 @@
 =========================================================================*/
 $(window).on('load', function() {
     $('body').addClass('loaded');
+    setTimeout(showdiv,3000);
 });
 
 /*=========================================================================
@@ -27,12 +28,21 @@ $(window).on('load', function() {
 /*=========================================================================
     Typed js Active
 =========================================================================*/
+
+    
+
+
+function showdiv(){
+    $('#vita').css('display','block');
+
     $(".typed").typed({
-        strings: ["Michel.", "Designer.", "Creative."],
+        strings: ["salvando vidas.", "transformando destinos.", "uniendo familias .", "generando esperanza…"],
         loop: true,
-        typeSpeed: 150
+        typeSpeed: 50
     });
-             
+ 
+}
+
 /*=========================================================================
     Initialize smoothscroll plugin
 =========================================================================*/
@@ -74,8 +84,8 @@ $(window).on('load', function() {
   var testiCarousel = $('#testi_carousel');
   testiCarousel.owlCarousel({
         loop: true,
-        autoplay: false,
-        smartSpeed: 800,
+        autoplay: true,
+        smartSpeed: 100,
         margin: 20,
         responsive : {
             // breakpoint from 0 up
@@ -88,10 +98,14 @@ $(window).on('load', function() {
             },
             // breakpoint from 768 up
             768 : {
-                items: 3
+                items: 1
             }
         }
     });
+
+$('.carousel').carousel({
+  interval: 2200
+})
              
 /*=========================================================================
     Active venobox

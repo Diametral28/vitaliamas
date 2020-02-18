@@ -26,6 +26,21 @@
     ========================================================================== */
 
 	@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto');
+
+    @font-face {
+      font-family: advent-pro; 
+      src: url(fuentes/advent-pro/adventpro-light.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: bluelmin-benedict; 
+      src: url(fuentes/bluelmin-benedict/Bluelmin-Benedict.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: hammersmith-one; 
+      src: url(fuentes/hammersmith-one/HammersmithOne.ttf) format('truetype');
+    }
 	
 /*  ==========================================================================
     1.0 Common Styles
@@ -35,8 +50,8 @@
 	margin:0;
 }
 body{
-    background-color: #fff;
-    font-family: 'Roboto', sans-serif;
+    background-color: #ffff;
+    font-family: 'advent-pro';
     font-size: 16px;
     line-height: 23px;
     color: #666;
@@ -45,7 +60,7 @@ body{
     overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'hammersmith-one';
 	letter-spacing: -1px;
 	color: #333;
 }
@@ -94,24 +109,31 @@ button{
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder{
-   color: #111 !important;
+   color: #dcdcdc !important;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder{ /* Firefox 18- */
-   color: #111 !important;  
+   color: #dcdcdc !important;  
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder{  /* Firefox 19+ */
-   color: #111 !important;  
+   color: #dcdcdc !important;  
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder{  
-   color: #111 !important;  
+   color: #dcdcdc !important;  
+}
+.icono-menu{
+    height: 50px;
+    width: 100px;
 }
 /* Helper Class */
+.white-text{
+    color: white !important;
+}
 .padding{
     padding: 100px 0;
 }
@@ -175,7 +197,7 @@ a,a:hover, .owl-prev, .owl-next, .form-control, .form-control:hover, .contact_bt
 
 /* Btn Style */
 .default_btn{
-    background-color: #ffc327;
+    background-color: #76b5f7;
     display: inline-block;
     vertical-align: middle;
     font-size: 14px;
@@ -327,7 +349,7 @@ a,a:hover, .owl-prev, .owl-next, .form-control, .form-control:hover, .contact_bt
    Header Section
    ========================================================================== */
 .header_area{
-    background-color: rgba(255,255,255,7);
+    background-color:  rgba(0, 0, 0, 0.55);
     position: fixed;
 	top: 0;
 	left: 0;
@@ -336,7 +358,7 @@ a,a:hover, .owl-prev, .owl-next, .form-control, .form-control:hover, .contact_bt
     z-index: 999;
 }
 .header_area:before{
-    background-color: #ffc327;
+    /* background-color: #ffc327; */ 
     display: block;
     content: '';
     width: 20%;
@@ -391,9 +413,8 @@ a,a:hover, .owl-prev, .owl-next, .form-control, .form-control:hover, .contact_bt
 ul.nav{}
 ul.nav > li{}
 ul.nav > li > a{
-	color: #111;
-    font-family: 'Roboto', sans-serif;
-	font-size: 14px;
+	color: #dcdcdc;
+	font-size: 15px;
 	font-weight: 400;
 	line-height: 70px;
 	padding: 0 15px;
@@ -407,14 +428,28 @@ ul.nav > li > a:hover,
 ul.nav > li > a:focus,
 ul.nav > li.active > a{
     background: none;
-	color: #ffc327;
+	color: #76b5f7;
+}
+
+.ver-mas{
+    color: #6c6cea !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+/* ==========================================================================
+   Google maps
+   ========================================================================== */
+
+#contactgoogleMap {
+    height: 343px;
 }
 
 /* ==========================================================================
    Hero Section
    ========================================================================== */
 .hero_section{
-    background-image: url('../img/hero-bg.jpg');
+    background-image: url('../img/pagina/slider principal.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -471,6 +506,106 @@ ul.nav > li.active > a{
     width: 64px;
     height: 64px;
     background-repeat: no-repeat;
+}
+.icon-circular{
+    text-align: center;
+}
+.icon-circular a.about-icon{
+    display: block;
+    background: transparent;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: 500px;
+    border: 1px solid #8b8b8b;
+    color: #444444;
+    font-size: 28px;
+    line-height: 132px;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.icon-circular a.about-icon:after{
+    position:absolute;
+	background:transparent;
+	content:'';
+	width:100%;
+	height: 100%;
+	border-radius: 500px;
+	left:0;
+	top:0;
+	border:1px solid transparent;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+
+}
+.icon-circular:hover a.about-icon{
+    background:#21242a;
+	color:white;
+	border:1px solid rgba(0,0,0,0);
+}
+
+.icon-circular:hover a.about-icon:after{
+    border:1px solid #21242a;
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.diamound-top{
+    margin-top: 60px;
+}
+.diamound{
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    /* line-height: 100px; */
+    border: 1px dashed #ffff;
+    border-radius: 8px;
+    color: #dcdcdc;
+    opacity: 0.8;
+    font-size: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+.diamound:hover{
+    background-color: #21242a;
+}
+
+.diamound span{
+    display: block;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 35px;
+    text-align: center !important;
+    color: #ffff;
+}
+.diamound span:hover{
+     color: white;
+}
+
+.diamound50 span{
+    margin-top: 50px !important;
+}
+
+.diamound-div{
+    width: 100%;
+    padding: 30px 24px;
+    padding-bottom: 30px;
+    padding-bottom: 0px;
+    border: 1px dashed #ffff;
+    border-radius: 12px;
+    color:#ffff;
+    /* background-color: rgba(35,37,43, 0.5); */
+    top: 0 !important;
+    margin-top: 50px;
 }
 
 /* ==========================================================================
@@ -541,7 +676,7 @@ ul.nav > li.active > a{
 }
 .portfolio_section .portfolio_filter li.active,
 .portfolio_section .portfolio_filter li:hover{
-	background-color: #ffc327;
+	background-color: #76b5f7;
 	color: #fff;
 	transition: all 0.5s ease-in-out;
 }
@@ -669,7 +804,7 @@ ul.nav > li.active > a{
 }
 .fs_dots .owl-dots div{
     background-color: transparent;
-    border: 1px solid #ffc327;
+    border: 1px solid #76b5f7;
     border-radius: 50%;
     width: 13px;
     height: 13px;
@@ -678,7 +813,7 @@ ul.nav > li.active > a{
     transition: all 0.2s linear;
 }
 .fs_dots .owl-dots div.active{
-    background-color: #ffc327;
+    background-color: #76b5f7;
     transition: all 0.2s linear;
 }
 
@@ -686,7 +821,7 @@ ul.nav > li.active > a{
    Call To Action
    ========================================================================== */
 .cta_section{
-    background-image: url(../img/cta-bg.jpg);
+    background-image: url(../img/pagina/Frase-3.jpg);
     background-attachment: fixed;
     padding: 160px 0;
     background-repeat: no-repeat;
@@ -718,6 +853,20 @@ ul.nav > li.active > a{
     background-color: #fff;
 }
 
+
+/* ==========================================================================
+   Parallax Section
+   ========================================================================== */
+.hacemos-parallax{
+    background-image: url(../img/pagina/parallax-exa.jpg);
+    background-attachment: fixed;
+    padding: 160px 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+} 
 /* ==========================================================================
    Blog Section
    ========================================================================== */
@@ -767,12 +916,14 @@ ul.nav > li.active > a{
    Contact Section
    ========================================================================== */
 .contact_section{
-    background-image: url(../img/contact-bg.jpg);
+    background-image: url(../img/pagina/contacto.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: left top;
     -webkit-background-size: cover;
     background-size: cover;
+    color: white !important;
+    text-align: center;
 }
 .contact_section h2{
     color: #fff;
@@ -782,20 +933,20 @@ ul.nav > li.active > a{
 }
 .contact_form{}
 .contact_form .form-control{
-    background-color: #fff;
-    color: #333;
+    background-color: #fff0;
+    color: #fff;
     height: 50px;
     border-radius: 3px;
-    border: none;
+    border-color: #afaeae;
 }
 .contact_form .form-control.msg{
     height: inherit;
 }
 .contact_form .form-control:focus,
 .contact_form .form-control:hover{
-    box-shadow: none;
+    /*box-shadow: none;
     outline: none;
-    border: none;
+    border: none;*/
 }
 .contact_form .default_btn{
     border-radius: 30px;
@@ -820,7 +971,7 @@ ul.nav > li.active > a{
     z-index: 1;
 }
 .footer_section:before{
-    background-color: #ffc327;
+    background-color: #000;
     display: block;
     content: '';
     width: 50%;
@@ -839,33 +990,34 @@ ul.nav > li.active > a{
     display: block;
     text-align: right;
 }
-.footer_social li{
+.footer_social {
     display: inline-block;
     margin-left: 10px;
 }
-.footer_social li a{
-    background-color: #ffc327;
-    font-size: 12px;
-    line-height: 30px;
+.footer_social a{
+    background-color: #484848;
+    font-size: 25px;
+    line-height: 50px;
     display: inline-block;
     color: #fff;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
 }
-.footer_social li a:hover{
+.footer_social a:hover{
     color: #333;
+    background-color: #ffff;
 }
 
 /* ==========================================================================
    Scroll to Top
    ========================================================================== */
 #scroll-to-top{
-    background-color: #ffc327;
+    background-color: #76b5f7;
     border-radius: 50%;
     display: none;
     width: 50px;
