@@ -32,6 +32,20 @@
     .blog_item .blog_content {
         margin: 0;
     }
+    .hero_section{
+        background-image: url('../img/pagina/slider principal.jpg');
+        background-repeat: no-repeat;
+        background-attachment: inherit;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .hacemos-parallax{
+        background-attachment: inherit;
+    } 
+    .contact_section{
+        background-attachment: inherit;
+    }
 
 }
 /* ---- End of max-width 992px CSS ---- */
@@ -39,7 +53,21 @@
 
 /* ---- Start of min-width 480px and max-width 768px CSS ---- */
 @media all and (min-width: 480px) and (max-width: 768px) {
-	
+	.hero_section{
+        background-image: url('../img/pagina/slider principal.jpg');
+        background-repeat: no-repeat;
+        background-attachment: inherit;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .hacemos-parallax{
+        background-attachment: inherit;
+
+    } 
+    .contact_section{
+        background-attachment: inherit;
+    }
     
 }
 /* ---- End of min-width 480px and max-width 768px CSS ---- */
@@ -105,10 +133,24 @@
 	}
     ul.nav > li > a:hover,
     ul.nav > li.active > a {
-        background-color: #ffc327;
+        background-color: #76b5f7;
         color: #fff;
     }
-    .hero_section,
+    .hero_section{
+        background-image: url('../img/pagina/slider principal.jpg');
+        background-repeat: no-repeat;
+        background-attachment: inherit;
+        background-position: center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .hacemos-parallax{
+        background-attachment: inherit;
+
+    } 
+    .contact_section{
+        background-attachment: inherit;
+    }
     .hero_inner{
         height: 480px;
     }

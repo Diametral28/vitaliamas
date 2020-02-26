@@ -262,9 +262,9 @@ a,a:hover, .owl-prev, .owl-next, .form-control, .form-control:hover, .contact_bt
     -moz-border-radius: 50% 50% 50% 50%;
     border-radius: 50% 50% 50% 50%;
     position: absolute;
-    border-top: 5px solid #ffc327;
+    border-top: 5px solid #76b5f7;
     border-bottom: 5px solid transparent;
-    border-left: 5px solid #ffc327;
+    border-left: 5px solid #76b5f7;
     border-right: 5px solid transparent;
     -webkit-animation: animate 2s infinite;
     animation: animate 2s infinite;
@@ -396,7 +396,7 @@ a,a:hover, .owl-prev, .owl-next, .form-control, .form-control:hover, .contact_bt
     line-height: 60px;
 }
 .navbar-header .nav-btn{
-	background-color: #ffc327;
+	background-color: #76b5f7;
 }
 .navbar-header .nav-btn .icon-bar{
 	background-color: #111;
@@ -600,8 +600,8 @@ ul.nav > li.active > a{
     padding: 30px 24px;
     padding-bottom: 30px;
     padding-bottom: 0px;
-    border: 1px dashed #ffff;
-    border-radius: 12px;
+    /*border: 1px dashed #ffff;*/
+    /*border-radius: 12px;*/
     color:#ffff;
     /* background-color: rgba(35,37,43, 0.5); */
     top: 0 !important;
@@ -853,6 +853,9 @@ ul.nav > li.active > a{
     background-color: #fff;
 }
 
+.lett-spac{
+    letter-spacing: 1px;
+}
 
 /* ==========================================================================
    Parallax Section
